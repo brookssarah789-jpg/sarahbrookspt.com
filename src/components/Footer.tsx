@@ -43,7 +43,7 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">Services</h4>
             <ul className="space-y-2">
-              {["Pelvic Floor Therapy", "Orthopedic PT", "Postpartum Rehab", "Telehealth"].map((item) => (
+              {["Pelvic Floor Therapy", "Orthopedic PT", "Return to Sport", "Telehealth"].map((item) => (
                 <li key={item}>
                   <span className="text-muted-foreground text-sm">{item}</span>
                 </li>
