@@ -13,7 +13,7 @@ const pelvicFloorConditions = [
   "Postpartum recovery & rehabilitation",
   "Diastasis recti",
   "Prolapse management",
-  "Coccyx (tailbone) pain",
+  "Constipation/bowel health",
   "Endometriosis-related pain",
 ];
 
