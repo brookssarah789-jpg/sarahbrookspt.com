@@ -3,48 +3,31 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Shield, Sparkles, Users } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import sarahPortrait from "@/assets/sarah-portrait.jpg";
-
-const features = [
-  {
-    icon: Heart,
-    title: "Holistic Approach",
-    description: "Treating the whole person, not just symptoms. Understanding how your body works together.",
-  },
-  {
-    icon: Shield,
-    title: "Specialized Care",
-    description: "Expert pelvic floor and orthopedic rehabilitation tailored to your unique needs.",
-  },
-  {
-    icon: Sparkles,
-    title: "Return to Sport",
-    description: "Get back to lifting, running, and the activities you love—especially postpartum.",
-  },
-  {
-    icon: Users,
-    title: "Personal Attention",
-    description: "One-on-one sessions focused entirely on your recovery and goals.",
-  },
-];
-
-const conditions = [
-  "Urinary Incontinence",
-  "Pelvic Pain",
-  "Postpartum Recovery",
-  "Low Back Pain",
-  "Pregnancy Rehabilitation",
-  "Return to Sport",
-];
-
+const features = [{
+  icon: Heart,
+  title: "Holistic Approach",
+  description: "Treating the whole person, not just symptoms. Understanding how your body works together."
+}, {
+  icon: Shield,
+  title: "Specialized Care",
+  description: "Expert pelvic floor and orthopedic rehabilitation tailored to your unique needs."
+}, {
+  icon: Sparkles,
+  title: "Return to Sport",
+  description: "Get back to lifting, running, and the activities you love—especially postpartum."
+}, {
+  icon: Users,
+  title: "Personal Attention",
+  description: "One-on-one sessions focused entirely on your recovery and goals."
+}];
+const conditions = ["Urinary Incontinence", "Pelvic Pain", "Postpartum Recovery", "Low Back Pain", "Pregnancy Rehabilitation", "Return to Sport"];
 export default function Index() {
-  return (
-    <>
+  return <>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBg})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${heroBg})`
+      }}>
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
         </div>
         
@@ -55,17 +38,23 @@ export default function Index() {
               <span className="text-sm text-primary font-medium">Now Accepting New Patients</span>
             </div>
             
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6 opacity-0 animate-fade-in-up" style={{
+            animationDelay: "0.1s"
+          }}>
               Reclaim Your Life with{" "}
               <span className="text-gradient">Compassionate Care</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 opacity-0 animate-fade-in-up" style={{
+            animationDelay: "0.2s"
+          }}>
               Hi, I&apos;m Sarah Brooks—a pelvic floor physical therapist dedicated to helping you 
               move freely, live fully, and get back to doing what you love without pain.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up" style={{
+            animationDelay: "0.3s"
+          }}>
               <Button asChild variant="hero" size="xl">
                 <Link to="/contact">
                   Schedule Your Consultation
@@ -86,11 +75,7 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden card-shadow">
-                <img 
-                  src={sarahPortrait} 
-                  alt="Sarah Brooks, Physical Therapist" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Sarah Brooks, Physical Therapist" className="w-full h-full object-cover" src="/lovable-uploads/f2e64828-c79f-4374-afe7-076b4dca2da1.jpg" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-background rounded-xl p-4 card-shadow border border-border">
                 <p className="font-serif text-lg font-semibold text-foreground">Sarah Brooks, DPT</p>
@@ -140,19 +125,15 @@ export default function Index() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div 
-                key={feature.title}
-                className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:card-shadow-hover opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {features.map((feature, index) => <div key={feature.title} className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:card-shadow-hover opacity-0 animate-fade-in-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -179,14 +160,9 @@ export default function Index() {
             </div>
             
             <div className="grid grid-cols-2 gap-4">
-              {conditions.map((condition, index) => (
-                <div 
-                  key={condition}
-                  className="p-4 rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300"
-                >
+              {conditions.map((condition, index) => <div key={condition} className="p-4 rounded-xl bg-background border border-border hover:border-primary/30 transition-all duration-300">
                   <span className="text-foreground font-medium">{condition}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -215,6 +191,5 @@ export default function Index() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 }
