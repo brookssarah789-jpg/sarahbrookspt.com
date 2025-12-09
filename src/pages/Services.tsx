@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 const pelvicFloorConditions = ["Urinary incontinence (stress, urge, mixed)", "Urinary frequency & urgency", "Pelvic pain & pelvic floor dysfunction", "Painful intercourse (dyspareunia)", "Vaginismus", "Constipation & bowel dysfunction", "Prenatal pain & discomfort", "Postpartum recovery & rehabilitation", "Diastasis recti", "Prolapse management", "Constipation/bowel health", "Endometriosis-related pain"];
-const musculoskeletalConditions = ["Low back pain", "Neck pain & cervical dysfunction", "Shoulder injuries & rotator cuff issues", "Knee pain & patellofemoral syndrome", "Hip pain & bursitis", "Sciatica & nerve pain", "Sports injuries", "Post-surgical rehabilitation", "TMJ dysfunction", "Headaches & migraines", "Core weakness & instability", "Return to sport training"];
+const musculoskeletalConditions = ["Low back pain", "Neck pain & cervical dysfunction", "Shoulder injuries & rotator cuff issues", "Knee pain & patellofemoral syndrome", "Hip pain & bursitis", "Sciatica & nerve pain", "Sports injuries", "Post-surgical rehabilitation", "Ankle injuries and instability", "Headaches & migraines", "Core weakness & instability", "Return to sport training"];
 export default function Services() {
   return <>
       {/* Hero */}
@@ -47,7 +47,14 @@ export default function Services() {
             <div className="bg-card rounded-2xl p-8 border border-border">
               <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions We Treat</h3>
               <div className="grid gap-3">
-                {pelvicFloorConditions.map(condition => {})}
+                {pelvicFloorConditions.map(condition => (
+                  <div key={condition} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-primary" />
+                    </div>
+                    <span className="text-foreground">{condition}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
