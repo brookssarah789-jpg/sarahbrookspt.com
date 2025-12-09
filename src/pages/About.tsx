@@ -2,17 +2,25 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Heart, Mountain, Award } from "lucide-react";
 import sarahPortrait from "@/assets/sarah-portrait.jpg";
-
-const credentials = [
-  { icon: GraduationCap, title: "BS Psychology", institution: "Binghamton University" },
-  { icon: Award, title: "DPT", institution: "Hunter College" },
-  { icon: Heart, title: "Pelvic Floor Specialist", institution: "Certified" },
-  { icon: Mountain, title: "PCES", institution: "Pregnancy & Postpartum Corrective Exercise Specialist" },
-];
-
+const credentials = [{
+  icon: GraduationCap,
+  title: "BS Psychology",
+  institution: "Binghamton University"
+}, {
+  icon: Award,
+  title: "DPT",
+  institution: "Hunter College"
+}, {
+  icon: Heart,
+  title: "Pelvic Floor Specialist",
+  institution: "Certified"
+}, {
+  icon: Mountain,
+  title: "PCES",
+  institution: "Pregnancy & Postpartum Corrective Exercise Specialist"
+}];
 export default function About() {
-  return (
-    <>
+  return <>
       {/* Hero */}
       <section className="py-20 lg:py-28 hero-gradient">
         <div className="container mx-auto px-4">
@@ -34,11 +42,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-28">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden card-shadow">
-                <img 
-                  src={sarahPortrait} 
-                  alt="Sarah Brooks, Physical Therapist" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Sarah Brooks, Physical Therapist" className="w-full h-full object-cover" src="/lovable-uploads/b2257c1e-1d27-45f5-9307-94ed4cde57fe.jpg" />
               </div>
             </div>
             
@@ -113,18 +117,13 @@ export default function About() {
             Education & Credentials
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {credentials.map((cred, index) => (
-              <div 
-                key={cred.title}
-                className="p-6 rounded-2xl bg-background border border-border text-center"
-              >
+            {credentials.map((cred, index) => <div key={cred.title} className="p-6 rounded-2xl bg-background border border-border text-center">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <cred.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-serif text-lg font-semibold text-foreground mb-1">{cred.title}</h3>
                 <p className="text-sm text-muted-foreground">{cred.institution}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -146,6 +145,5 @@ export default function About() {
           </Button>
         </div>
       </section>
-    </>
-  );
+    </>;
 }
