@@ -5,32 +5,36 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     subject: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // For now, just show a toast - in production, this would send an email
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you within 24-48 hours.",
+      description: "Thank you for reaching out. I'll get back to you within 24-48 hours."
     });
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
-
-  return (
-    <>
+  return <>
       {/* Hero */}
       <section className="py-20 lg:py-28 hero-gradient">
         <div className="container mx-auto px-4">
@@ -63,10 +67,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Email</h3>
-                    <a 
-                      href="mailto:brookssarah789@gmail.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
+                    <a href="mailto:brookssarah789@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                       brookssarah789@gmail.com
                     </a>
                   </div>
@@ -78,10 +79,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Phone</h3>
-                    <a 
-                      href="tel:914-536-3433"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
+                    <a href="tel:914-536-3433" className="text-muted-foreground hover:text-primary transition-colors">
                       (914) 536-3433
                     </a>
                   </div>
@@ -105,20 +103,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Service Area</h3>
-                    <p className="text-muted-foreground">
-                      Home visits available in the Westchester County area. 
-                      Telehealth available everywhere.
-                    </p>
+                    <p className="text-muted-foreground">Home visits available in the Manhattan area. Telehealth available anywhere in New York.</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-10 p-6 rounded-xl bg-secondary/50 border border-border">
-                <h3 className="font-medium text-foreground mb-2">Prefer to Schedule Directly?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Call or text me at (914) 536-3433 and we can discuss your needs and 
-                  find a time that works for you.
-                </p>
+                <h3 className="font-medium text-foreground mb-2">Visits By Appointment Only. Please Schedule Directly:</h3>
+                <p className="text-muted-foreground text-sm">Call or text me at (914) 536-3433 and we can discuss your needs and find a time and place that works for you.</p>
               </div>
             </div>
 
@@ -131,65 +123,28 @@ export default function Contact() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name *</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your name"
-                      required
-                    />
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" required />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="your@email.com"
-                      required
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" required />
                   </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="(555) 555-5555"
-                    />
+                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="(555) 555-5555" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject *</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      placeholder="How can I help?"
-                      required
-                    />
+                    <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="How can I help?" required />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Message *</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell me about your concerns, goals, or any questions you have..."
-                    rows={5}
-                    required
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell me about your concerns, goals, or any questions you have..." rows={5} required />
                 </div>
 
                 <Button type="submit" variant="hero" size="lg" className="w-full">
@@ -204,6 +159,5 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 }
