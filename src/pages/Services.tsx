@@ -69,11 +69,7 @@ export default function Services() {
                   My holistic approach means I look at the whole picture—understanding how different parts 
                   of your body work together and affect each other.
                 </p>
-                <p>
-                  Whether you&apos;re dealing with chronic back pain, recovering from surgery, or working toward 
-                  athletic goals, I&apos;ll create a personalized treatment plan to help you move better and 
-                  feel stronger.
-                </p>
+                <p>Treatment may include manual therapy, therapeutic exercises, neuromuscular re-education, and habit education and planning to help you understand your body and manage symptoms independently. My goal is always to empower you with the knowledge and tools you need for lasting results.</p>
               </div>
             </div>
             
