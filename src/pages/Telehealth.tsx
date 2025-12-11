@@ -1,26 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Home, Video, Clock, CheckCircle } from "lucide-react";
-
-const homeCareBenefits = [
-  "Comfort of your own space",
-  "No travel required—especially helpful postpartum",
-  "Easier for those with mobility challenges",
-  "More relaxed, private environment",
-  "Family members can observe and learn",
-];
-
-const telehealthBenefits = [
-  "Convenience from anywhere",
-  "Great for exercise instruction and form checks",
-  "Perfect for education-focused sessions",
-  "Ideal for follow-ups and progress checks",
-  "Flexible scheduling options",
-];
-
+const homeCareBenefits = ["Comfort of your own space", "No travel required—especially helpful postpartum", "Easier for those with mobility challenges", "More relaxed, private environment", "Family members can observe and learn"];
+const telehealthBenefits = ["Convenience from anywhere", "Great for exercise instruction and form checks", "Perfect for education-focused sessions", "Ideal for follow-ups and progress checks", "Flexible scheduling options"];
 export default function Telehealth() {
-  return (
-    <>
+  return <>
       {/* Hero */}
       <section className="py-20 lg:py-28 hero-gradient">
         <div className="container mx-auto px-4">
@@ -46,9 +30,7 @@ export default function Telehealth() {
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
                 <Home className="w-7 h-7 text-primary" />
               </div>
-              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
-                In-Home Care
-              </h2>
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">In-Home Care </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 I come to you! In-home physical therapy sessions provide the same quality 
                 care you&apos;d receive in a clinic, but in the comfort and privacy of your own home.
@@ -59,14 +41,12 @@ export default function Telehealth() {
               </p>
               <h3 className="font-medium text-foreground mb-4">Benefits:</h3>
               <ul className="space-y-3 mb-8">
-                {homeCareBenefits.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-3">
+                {homeCareBenefits.map(benefit => <li key={benefit} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-muted-foreground">{benefit}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
@@ -88,14 +68,12 @@ export default function Telehealth() {
               </p>
               <h3 className="font-medium text-foreground mb-4">Benefits:</h3>
               <ul className="space-y-3 mb-8">
-                {telehealthBenefits.map((benefit) => (
-                  <li key={benefit} className="flex items-start gap-3">
+                {telehealthBenefits.map(benefit => <li key={benefit} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-muted-foreground">{benefit}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
           </div>
@@ -124,10 +102,7 @@ export default function Telehealth() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-2">Session Duration</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Initial evaluations typically last 60-90 minutes. Follow-up sessions 
-                      are usually 45-60 minutes, depending on your treatment plan.
-                    </p>
+                    <p className="text-muted-foreground text-sm">Initial evaluations typically last 45-60 minutes. Follow-up sessions are usually 35-45 minutes, depending on your treatment plan.</p>
                   </div>
                 </div>
               </div>
@@ -172,6 +147,5 @@ export default function Telehealth() {
           </Button>
         </div>
       </section>
-    </>
-  );
+    </>;
 }
