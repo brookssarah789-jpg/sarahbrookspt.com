@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 const pelvicFloorConditions = ["Urinary incontinence (stress, urge, mixed)", "Urinary frequency & urgency", "Pelvic pain & pelvic floor dysfunction", "Painful intercourse (dyspareunia)", "Vaginismus", "Constipation & bowel dysfunction", "Prenatal pain & discomfort", "Postpartum recovery & rehabilitation", "Diastasis recti", "Prolapse management", "Constipation/bowel health", "Endometriosis-related pain"];
-const musculoskeletalConditions = ["Low back pain", "Neck pain & cervical dysfunction", "Shoulder injuries & rotator cuff issues", "Knee pain & patellofemoral syndrome", "Hip pain & bursitis", "Sciatica & nerve pain", "Sports injuries", "Post-surgical rehabilitation", "Ankle injuries and instability", "Headaches & migraines", "Core weakness & instability", "Return to sport training"];
+const musculoskeletalConditions = ["Low back pain", "Neck pain & cervical dysfunction", "Shoulder injuries & rotator cuff issues", "Knee pain & patellofemoral syndrome", "Hip pain & bursitis", "Sciatica & nerve pain", "Sports injuries", "Post-surgical rehabilitation", "Ankle injuries & instability", "Headaches & migraines", "Core weakness & instability", "Return to sport training"];
 export default function Services() {
   return <>
       {/* Hero */}
