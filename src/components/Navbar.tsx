@@ -11,7 +11,7 @@ const navigation = [
   { name: "FAQs", href: "/faqs" },
   { name: "Misconceptions", href: "/misconceptions" },
   { name: "Blog", href: "/blog" },
-  { name: "Telehealth", href: "/telehealth" },
+  { name: "Locations", href: "/telehealth" },
   { name: "Contact", href: "/contact" },
 ];
 
