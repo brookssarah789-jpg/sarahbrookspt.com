@@ -10,7 +10,7 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "FAQs", href: "/faqs" },
   { name: "Misconceptions", href: "/misconceptions" },
-  { name: "Blog", href: "/blog" },
+  { name: "Resources", href: "/blog" },
   { name: "Locations", href: "/telehealth" },
   { name: "Contact", href: "/contact" },
 ];
