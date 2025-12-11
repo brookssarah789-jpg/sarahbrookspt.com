@@ -73,6 +73,12 @@ export function Footer() {
                   (914) 536-3433
                 </a>
               </li>
+              <li>
+                <span className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <MapPin className="w-4 h-4" />
+                  Serving New York County, Manhattan
+                </span>
+              </li>
             </ul>
           </div>
         </div>
