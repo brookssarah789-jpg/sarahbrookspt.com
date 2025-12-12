@@ -1,111 +1,194 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Clock, Tag } from "lucide-react";
-const blogPosts = [{
-  id: 1,
-  title: "Understanding Your Pelvic Floor: A Beginner's Guide",
-  excerpt: "Learn the basics of pelvic floor anatomy and function, and why this often-overlooked muscle group is so important for your overall health.",
-  date: "Coming Soon",
-  readTime: "5 min read",
-  category: "Education"
-}, {
-  id: 2,
-  title: "Return to Running Postpartum: A Safe, Gradual Approach",
-  excerpt: "Eager to get back to running after having a baby? Here's what you need to know about safely returning to exercise postpartum.",
-  date: "Coming Soon",
-  readTime: "7 min read",
-  category: "Postpartum"
-}, {
-  id: 3,
-  title: "Why Kegels Aren't Always the Answer",
-  excerpt: "Kegels are often the go-to advice for pelvic floor issues, but they're not right for everyone. Here's how to know what your body needs.",
-  date: "Coming Soon",
-  readTime: "6 min read",
-  category: "Treatment"
-}, {
-  id: 4,
-  title: "Breathing and Your Pelvic Floor: The Connection You Need to Know",
-  excerpt: "Discover how your breathing patterns directly affect your pelvic floor function and learn techniques to improve both.",
-  date: "Coming Soon",
-  readTime: "4 min read",
-  category: "Wellness"
-}, {
-  id: 5,
-  title: "Pregnancy Exercise Myths: What's Safe and What's Not",
-  excerpt: "There's a lot of conflicting information about exercise during pregnancy. Let's separate the facts from the fiction.",
-  date: "Coming Soon",
-  readTime: "8 min read",
-  category: "Pregnancy"
-}, {
-  id: 6,
-  title: "When to Seek Help for Pelvic Pain",
-  excerpt: "Pelvic pain can have many causes. Learn the signs that indicate it's time to see a pelvic floor specialist.",
-  date: "Coming Soon",
-  readTime: "5 min read",
-  category: "Pain"
-}];
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ArrowRight, FileDown, BookOpen, Activity, Wind, Baby, AlertTriangle, Heart } from "lucide-react";
+
+const funFacts = [
+  {
+    id: "pelvic-basics",
+    icon: BookOpen,
+    title: "Pelvic Floor Basics",
+    facts: [
+      "Your pelvic floor is a group of muscles that support your bladder, bowel, and uterus",
+      "These muscles help control bladder and bowel function",
+      "Signs it may need attention: leaking, urgency, pelvic pain, or heaviness",
+      "Both weakness AND tightness can cause problems",
+    ],
+  },
+  {
+    id: "postpartum-running",
+    icon: Activity,
+    title: "Returning to Running Postpartum",
+    facts: [
+      "Wait at least 12 weeks minimum before returning to running",
+      "Signs you're ready: no leaking during daily activities, pain-free, cleared by provider",
+      "Start with walking, then progress to walk-run intervals",
+      "Listen to your body - slow progression is key!",
+    ],
+  },
+  {
+    id: "beyond-kegels",
+    icon: Heart,
+    title: "Beyond Kegels",
+    facts: [
+      "Kegels aren't always the answer - some pelvic floors need relaxation, not strengthening",
+      "Proper assessment determines the right approach for YOU",
+      "Coordination and timing matter as much as strength",
+      "A pelvic floor PT can help determine what your body needs",
+    ],
+  },
+  {
+    id: "breathing",
+    icon: Wind,
+    title: "Breathing & Pelvic Floor Connection",
+    facts: [
+      "Your diaphragm and pelvic floor work together as a team",
+      "Inhale = pelvic floor relaxes and lowers; Exhale = pelvic floor lifts",
+      "Breath-holding during exercise can increase pelvic pressure",
+      "Learning to coordinate breath with movement is essential for core function",
+    ],
+  },
+  {
+    id: "pregnancy",
+    icon: Baby,
+    title: "Pregnancy Exercise Facts",
+    facts: [
+      "Most exercise is safe during pregnancy with appropriate modifications",
+      "Avoid exercises that cause coning or doming of your abdomen",
+      "Stay active but always listen to your body's signals",
+      "Pelvic floor PT during pregnancy can help prepare for birth and recovery",
+    ],
+  },
+  {
+    id: "when-to-seek-help",
+    icon: AlertTriangle,
+    title: "When to Seek Help",
+    facts: [
+      "Pain during intimacy or with tampon use",
+      "Persistent pelvic, hip, or low back pain",
+      "Urgency, frequency, or leaking",
+      "You don't have to live with these symptoms!",
+    ],
+  },
+];
+
 export default function Blog() {
-  return <>
+  return (
+    <>
       {/* Hero */}
       <section className="py-20 lg:py-28 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="text-primary font-medium uppercase tracking-wider text-sm">Resources</span>
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-6"> Resources</h1>
+            <span className="text-primary font-medium uppercase tracking-wider text-sm">
+              Learn
+            </span>
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-6">
+              Resources & Fun Facts
+            </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Educational content, tips, and insights to help you understand your body 
-              and support your healing journey.
+              Quick, helpful information to support your pelvic health journey.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Blog Posts */}
+      {/* Fun Facts Accordion */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map(post => <article key={post.id} className="bg-card rounded-2xl border border-border overflow-hidden group hover:border-primary/30 transition-all duration-300 hover:card-shadow-hover">
-                <div className="aspect-video bg-secondary/50 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Video/Image Coming Soon</span>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="inline-flex items-center gap-1 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
-                      <Tag className="w-3 h-3" />
-                      {post.category}
-                    </span>
-                  </div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {post.date}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {post.readTime}
-                    </span>
-                  </div>
-                </div>
-              </article>)}
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {funFacts.map((category) => {
+                const IconComponent = category.icon;
+                return (
+                  <AccordionItem
+                    key={category.id}
+                    value={category.id}
+                    className="bg-card border border-border rounded-2xl px-6 data-[state=open]:border-primary/30"
+                  >
+                    <AccordionTrigger className="hover:no-underline py-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <IconComponent className="w-5 h-5 text-primary" />
+                        </div>
+                        <span className="font-serif text-xl font-semibold text-foreground text-left">
+                          {category.title}
+                        </span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-6">
+                      <ul className="space-y-3 pl-14">
+                        {category.facts.map((fact, index) => (
+                          <li
+                            key={index}
+                            className="text-muted-foreground leading-relaxed flex items-start gap-3"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                            {fact}
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
           </div>
         </div>
       </section>
 
-      {/* Newsletter CTA */}
+      {/* Downloadable Resources */}
+      <section className="py-20 lg:py-28 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
+                Downloadable Resources
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Helpful tools to support your pelvic health journey.
+              </p>
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-8 hover:border-primary/30 transition-colors">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <FileDown className="w-8 h-8 text-primary" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
+                    Bladder Diary
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Track your fluid intake, food, and bathroom habits to identify patterns.
+                    Bring this helpful information to your appointment.
+                  </p>
+                </div>
+                <Button asChild variant="hero" size="lg" className="flex-shrink-0">
+                  <a href="/bladder-diary.pdf" download>
+                    <FileDown className="w-5 h-5 mr-2" />
+                    Download PDF
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="py-20 lg:py-28 bg-card">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
-            Stay Updated
+            Have Questions?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            New content is coming soon! In the meantime, reach out if you have questions 
-            or topics you&apos;d like me to cover.
+            I'm here to help. Reach out if you have questions or want to learn more
+            about how pelvic floor physical therapy can support you.
           </p>
           <Button asChild variant="hero" size="xl">
             <Link to="/contact">
@@ -115,5 +198,6 @@ export default function Blog() {
           </Button>
         </div>
       </section>
-    </>;
+    </>
+  );
 }
