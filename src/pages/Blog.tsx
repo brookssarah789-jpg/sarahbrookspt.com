@@ -1,69 +1,57 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Clock, Tag } from "lucide-react";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Understanding Your Pelvic Floor: A Beginner's Guide",
-    excerpt: "Learn the basics of pelvic floor anatomy and function, and why this often-overlooked muscle group is so important for your overall health.",
-    date: "Coming Soon",
-    readTime: "5 min read",
-    category: "Education",
-  },
-  {
-    id: 2,
-    title: "Return to Running Postpartum: A Safe, Gradual Approach",
-    excerpt: "Eager to get back to running after having a baby? Here's what you need to know about safely returning to exercise postpartum.",
-    date: "Coming Soon",
-    readTime: "7 min read",
-    category: "Postpartum",
-  },
-  {
-    id: 3,
-    title: "Why Kegels Aren't Always the Answer",
-    excerpt: "Kegels are often the go-to advice for pelvic floor issues, but they're not right for everyone. Here's how to know what your body needs.",
-    date: "Coming Soon",
-    readTime: "6 min read",
-    category: "Treatment",
-  },
-  {
-    id: 4,
-    title: "Breathing and Your Pelvic Floor: The Connection You Need to Know",
-    excerpt: "Discover how your breathing patterns directly affect your pelvic floor function and learn techniques to improve both.",
-    date: "Coming Soon",
-    readTime: "4 min read",
-    category: "Wellness",
-  },
-  {
-    id: 5,
-    title: "Pregnancy Exercise Myths: What's Safe and What's Not",
-    excerpt: "There's a lot of conflicting information about exercise during pregnancy. Let's separate the facts from the fiction.",
-    date: "Coming Soon",
-    readTime: "8 min read",
-    category: "Pregnancy",
-  },
-  {
-    id: 6,
-    title: "When to Seek Help for Pelvic Pain",
-    excerpt: "Pelvic pain can have many causes. Learn the signs that indicate it's time to see a pelvic floor specialist.",
-    date: "Coming Soon",
-    readTime: "5 min read",
-    category: "Pain",
-  },
-];
-
+const blogPosts = [{
+  id: 1,
+  title: "Understanding Your Pelvic Floor: A Beginner's Guide",
+  excerpt: "Learn the basics of pelvic floor anatomy and function, and why this often-overlooked muscle group is so important for your overall health.",
+  date: "Coming Soon",
+  readTime: "5 min read",
+  category: "Education"
+}, {
+  id: 2,
+  title: "Return to Running Postpartum: A Safe, Gradual Approach",
+  excerpt: "Eager to get back to running after having a baby? Here's what you need to know about safely returning to exercise postpartum.",
+  date: "Coming Soon",
+  readTime: "7 min read",
+  category: "Postpartum"
+}, {
+  id: 3,
+  title: "Why Kegels Aren't Always the Answer",
+  excerpt: "Kegels are often the go-to advice for pelvic floor issues, but they're not right for everyone. Here's how to know what your body needs.",
+  date: "Coming Soon",
+  readTime: "6 min read",
+  category: "Treatment"
+}, {
+  id: 4,
+  title: "Breathing and Your Pelvic Floor: The Connection You Need to Know",
+  excerpt: "Discover how your breathing patterns directly affect your pelvic floor function and learn techniques to improve both.",
+  date: "Coming Soon",
+  readTime: "4 min read",
+  category: "Wellness"
+}, {
+  id: 5,
+  title: "Pregnancy Exercise Myths: What's Safe and What's Not",
+  excerpt: "There's a lot of conflicting information about exercise during pregnancy. Let's separate the facts from the fiction.",
+  date: "Coming Soon",
+  readTime: "8 min read",
+  category: "Pregnancy"
+}, {
+  id: 6,
+  title: "When to Seek Help for Pelvic Pain",
+  excerpt: "Pelvic pain can have many causes. Learn the signs that indicate it's time to see a pelvic floor specialist.",
+  date: "Coming Soon",
+  readTime: "5 min read",
+  category: "Pain"
+}];
 export default function Blog() {
-  return (
-    <>
+  return <>
       {/* Hero */}
       <section className="py-20 lg:py-28 hero-gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">Resources</span>
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-6">
-              Blog & Resources
-            </h1>
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-6"> Resources</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Educational content, tips, and insights to help you understand your body 
               and support your healing journey.
@@ -76,11 +64,7 @@ export default function Blog() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <article 
-                key={post.id}
-                className="bg-card rounded-2xl border border-border overflow-hidden group hover:border-primary/30 transition-all duration-300 hover:card-shadow-hover"
-              >
+            {blogPosts.map(post => <article key={post.id} className="bg-card rounded-2xl border border-border overflow-hidden group hover:border-primary/30 transition-all duration-300 hover:card-shadow-hover">
                 <div className="aspect-video bg-secondary/50 flex items-center justify-center">
                   <span className="text-muted-foreground text-sm">Video/Image Coming Soon</span>
                 </div>
@@ -108,8 +92,7 @@ export default function Blog() {
                     </span>
                   </div>
                 </div>
-              </article>
-            ))}
+              </article>)}
           </div>
         </div>
       </section>
@@ -132,6 +115,5 @@ export default function Blog() {
           </Button>
         </div>
       </section>
-    </>
-  );
+    </>;
 }
