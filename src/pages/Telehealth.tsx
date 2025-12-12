@@ -35,10 +35,10 @@ export default function Telehealth() {
                 I come to you! In-home physical therapy sessions provide the same quality 
                 care you&apos;d receive in a clinic, but in the comfort and privacy of your own home.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                This option is especially beneficial for postpartum patients, those with young 
-                children, or anyone who finds traveling to appointments challenging.
-              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">This option is especially beneficial for postpartum patients, those with young children, or anyone who finds traveling to appointments challenging.
+
+
+Please contact to confirm we serve your location.</p>
               <h3 className="font-medium text-foreground mb-4">Benefits:</h3>
               <ul className="space-y-3 mb-8">
                 {homeCareBenefits.map(benefit => <li key={benefit} className="flex items-start gap-3">
@@ -62,10 +62,11 @@ export default function Telehealth() {
                 Virtual sessions via secure video call allow us to work together from anywhere. 
                 Telehealth is perfect for education, exercise instruction, and ongoing support.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                While some aspects of treatment require hands-on care, many components of 
-                pelvic floor rehabilitation can be effectively delivered virtually.
-              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">While some aspects of treatment require hands-on care, many components of pelvic floor rehabilitation can be effectively delivered virtually.
+
+
+
+            </p>
               <h3 className="font-medium text-foreground mb-4">Benefits:</h3>
               <ul className="space-y-3 mb-8">
                 {telehealthBenefits.map(benefit => <li key={benefit} className="flex items-start gap-3">
@@ -102,7 +103,7 @@ export default function Telehealth() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-2">Session Duration</h3>
-                    <p className="text-muted-foreground text-sm">Initial evaluations typically last 45-60 minutes. Follow-up sessions are usually 35-45 minutes, depending on your treatment plan.</p>
+                    <p className="text-muted-foreground text-sm">Initial evaluations typically last 45-60 minutes. Follow-up sessions are usually 40-45 minutes, depending on your treatment plan.</p>
                   </div>
                 </div>
               </div>
