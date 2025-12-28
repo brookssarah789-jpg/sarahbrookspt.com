@@ -44,7 +44,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">(914) 570-4265</h4>
+            <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">Contact Information</h4>
             <ul className="space-y-3">
               <li>
                 <a href="mailto:brookssarah789@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm">
