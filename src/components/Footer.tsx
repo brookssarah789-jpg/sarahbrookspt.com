@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Leaf, Mail, Phone, MapPin } from "lucide-react";
-
 export function Footer() {
-  return (
-    <footer className="bg-card border-t border-border">
+  return <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
@@ -26,16 +24,11 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">Quick Links</h4>
             <ul className="space-y-2">
-              {["About", "Services", "FAQs", "Blog"].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={`/${item.toLowerCase()}`}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                  >
+              {["About", "Services", "FAQs", "Blog"].map(item => <li key={item}>
+                  <Link to={`/${item.toLowerCase()}`} className="text-muted-foreground hover:text-primary transition-colors text-sm">
                     {item}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -43,11 +36,9 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">Services</h4>
             <ul className="space-y-2">
-              {["Pelvic Floor Therapy", "Orthopedic PT", "Return to Sport", "Telehealth"].map((item) => (
-                <li key={item}>
+              {["Pelvic Floor Therapy", "Orthopedic PT", "Return to Sport", "Telehealth"].map(item => <li key={item}>
                   <span className="text-muted-foreground text-sm">{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -56,20 +47,13 @@ export function Footer() {
             <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="mailto:brookssarah789@gmail.com"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
-                >
+                <a href="mailto:brookssarah789@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm">
                   <Mail className="w-4 h-4" />
                   brookssarah789@gmail.com
                 </a>
               </li>
               <li>
-                <a
-                  href="tel:914-536-3433"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
-                >
-                  <Phone className="w-4 h-4" />
+                <a href="tel:914-536-3433" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm">(914) 570-4265<Phone className="w-4 h-4" />
                   (914) 536-3433
                 </a>
               </li>
@@ -89,6 +73,5 @@ export function Footer() {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
