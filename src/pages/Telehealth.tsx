@@ -64,8 +64,6 @@ Please contact to confirm we serve your location.</p>
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">While some aspects of treatment require hands-on care, many components of pelvic floor rehabilitation can be effectively delivered virtually.
 
-
-
             </p>
               <h3 className="font-medium text-foreground mb-4">Benefits:</h3>
               <ul className="space-y-3 mb-8">
