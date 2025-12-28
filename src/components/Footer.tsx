@@ -44,7 +44,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">Contact</h4>
+            <h4 className="font-serif text-lg font-semibold mb-4 text-foreground">​</h4>
             <ul className="space-y-3">
               <li>
                 <a href="mailto:brookssarah789@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm">
@@ -53,7 +53,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:914-536-3433" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm">(914) 570-4265<Phone className="w-4 h-4" />
+                <a href="tel:914-536-3433" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm">
+                  <Phone className="w-4 h-4" />
                   (914) 536-3433
                 </a>
               </li>
