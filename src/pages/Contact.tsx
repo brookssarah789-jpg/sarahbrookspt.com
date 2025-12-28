@@ -103,7 +103,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Service Area</h3>
-                    <p className="text-muted-foreground">Home visits available in the Manhattan area. Telehealth available anywhere in New York.</p>
+                    <p className="text-muted-foreground">Home visits available in Manhattan, New York. Telehealth available anywhere in New York.</p>
                   </div>
                 </div>
               </div>
