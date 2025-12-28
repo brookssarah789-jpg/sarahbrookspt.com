@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <span className="flex items-center gap-2 text-muted-foreground text-sm">
                   <MapPin className="w-4 h-4" />
-                  Serving New York County, Manhattan
+                  Manhattan, New York
                 </span>
               </li>
             </ul>
