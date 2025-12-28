@@ -18,10 +18,6 @@ const faqs = [
     answer: "Your first visit will include a thorough evaluation where we discuss your medical history, symptoms, and goals. We'll perform a physical assessment that may include an external and/or internal pelvic floor examination (with your consent). From there, we'll develop a personalized treatment plan together. Wear comfortable clothing and be prepared to share openly about your symptoms."
   },
   {
-    question: "Is pelvic floor therapy only for women?",
-    answer: "No! While I specialize in women's health, pelvic floor dysfunction affects people of all genders. Men can experience pelvic pain, incontinence, and other symptoms related to pelvic floor dysfunction. If you're experiencing these issues, please don't hesitate to reach out."
-  },
-  {
     question: "How many sessions will I need?",
     answer: "This varies significantly based on your condition, its severity, and your goals. Some people see significant improvement in 4-6 sessions, while others may benefit from longer-term care. We'll regularly reassess your progress and adjust your treatment plan accordingly."
   },
