@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "How many sessions will I need?",
-    answer: "This varies significantly based on your condition, its severity, and your goals. Some people see significant improvement in 4-6 sessions, while others may benefit from longer-term care. We'll regularly reassess your progress and adjust your treatment plan accordingly."
+    answer: "This varies significantly based on your condition, its severity, and your goals. Some people see significant improvement in a few sessions, while others may benefit from longer-term care. We'll regularly reassess your progress and adjust your treatment plan accordingly."
   },
   {
     question: "Do you accept insurance?",
