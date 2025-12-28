@@ -79,8 +79,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Phone</h3>
-                    <a href="tel:914-536-3433" className="text-muted-foreground hover:text-primary transition-colors">
-                      (914) 536-3433
+                    <a href="tel:914-570-4265" className="text-muted-foreground hover:text-primary transition-colors">
+                      (914) 570-4265
                     </a>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default function Contact() {
 
               <div className="mt-10 p-6 rounded-xl bg-secondary/50 border border-border">
                 <h3 className="font-medium text-foreground mb-2">Visits By Appointment Only. Please Schedule Directly:</h3>
-                <p className="text-muted-foreground text-sm">Call or text me at (914) 536-3433 and we can discuss your needs and find a time and place that works for you.</p>
+                <p className="text-muted-foreground text-sm">Call or text me at (914) 570-4265 and we can discuss your needs and find a time and place that works for you.</p>
               </div>
             </div>
 
