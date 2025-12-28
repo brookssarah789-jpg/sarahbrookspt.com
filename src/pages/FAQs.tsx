@@ -41,10 +41,6 @@ const faqs = [
     question: "Is it normal to leak during exercise?",
     answer: "Common? Yes. Normal? No. Leaking during exercise—whether it's sneezing, running, or lifting—is a sign of pelvic floor dysfunction that can be addressed with proper treatment. You shouldn't have to wear pads to the gym or avoid activities you love."
   },
-  {
-    question: "What if I'm embarrassed to talk about my symptoms?",
-    answer: "I completely understand—these topics can feel vulnerable to discuss. Please know that I create a safe, judgment-free space for all my patients. There's nothing you can tell me that I haven't heard before, and addressing these issues openly is the first step toward healing."
-  },
 ];
 
 export default function FAQs() {
