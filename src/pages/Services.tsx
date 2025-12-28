@@ -45,16 +45,14 @@ export default function Services() {
             </div>
             
             <div className="bg-card rounded-2xl p-8 border border-border">
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions We Treat</h3>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions I Treat</h3>
               <div className="grid gap-3">
-                {pelvicFloorConditions.map(condition => (
-                  <div key={condition} className="flex items-start gap-3">
+                {pelvicFloorConditions.map(condition => <div key={condition} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-3 h-3 text-primary" />
                     </div>
                     <span className="text-foreground">{condition}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -81,7 +79,7 @@ export default function Services() {
             </div>
             
             <div className="bg-background rounded-2xl p-8 border border-border lg:order-1">
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions We Treat</h3>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions I Treat</h3>
               <div className="grid gap-3">
                 {musculoskeletalConditions.map(condition => <div key={condition} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
