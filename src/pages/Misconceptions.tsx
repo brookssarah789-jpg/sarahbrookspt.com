@@ -24,10 +24,6 @@ const misconceptions = [
     truth: "There's no reason to wait! Addressing symptoms now can improve your quality of life today and may actually make future pregnancies and recoveries easier. You don't have to suffer for years."
   },
   {
-    myth: "Only women have pelvic floor problems",
-    truth: "Men have pelvic floors too, and they can experience dysfunction including incontinence, pelvic pain, and sexual dysfunction. Pelvic floor PT can help people of all genders."
-  },
-  {
     myth: "Pelvic floor issues are 'just part of being a mom'",
     truth: "This dismissive attitude keeps too many people from seeking help. Yes, pregnancy and delivery affect the pelvic floor, but dysfunction is treatable—not inevitable. You deserve to feel strong and comfortable in your body."
   },
