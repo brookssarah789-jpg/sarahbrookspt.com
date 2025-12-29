@@ -10,7 +10,7 @@ export default function Services() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <span className="text-primary font-medium uppercase tracking-wider text-sm">Services</span>
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-6">What I Treat</h1>
+            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-6">What Sarah Treats</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Comprehensive care for pelvic floor dysfunction and general musculoskeletal conditions, 
               always with a holistic approach.
@@ -43,7 +43,7 @@ export default function Services() {
             </div>
             
             <div className="bg-card rounded-2xl p-8 border border-border">
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions I Treat</h3>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions Sarah Treats</h3>
               <div className="grid gap-3">
                 {pelvicFloorConditions.map(condition => <div key={condition} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -77,7 +77,7 @@ export default function Services() {
             </div>
             
             <div className="bg-background rounded-2xl p-8 border border-border lg:order-1">
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions I Treat</h3>
+              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">Conditions Sarah Treats</h3>
               <div className="grid gap-3">
                 {musculoskeletalConditions.map(condition => <div key={condition} className="flex items-start gap-3">
                     <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
