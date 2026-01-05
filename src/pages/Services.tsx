@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import pelvicAnatomyImg from "@/assets/pelvic-anatomy.jpg";
+import musculoskeletalImg from "@/assets/musculoskeletal-anatomy.jpg";
 const pelvicFloorConditions = ["Urinary incontinence (stress, urge, mixed)", "Urinary frequency & urgency", "Pelvic pain & pelvic floor dysfunction", "Painful intercourse (dyspareunia)", "Vaginismus", "Constipation & bowel dysfunction", "Prenatal pain & discomfort", "Postpartum recovery & rehabilitation", "Diastasis recti", "Prolapse management", "Constipation/bowel health", "Abdominal pain", "C-section scar mobilization"];
 const musculoskeletalConditions = ["Low back pain", "Neck pain & cervical dysfunction", "Shoulder injuries & rotator cuff issues", "Knee pain & patellofemoral syndrome", "Hip pain & bursitis", "Sciatica & nerve pain", "Sports injuries", "Post-surgical rehabilitation", "Ankle injuries & instability", "Balance training", "Core weakness & instability", "Return to sport training"];
 export default function Services() {
@@ -70,7 +71,7 @@ export default function Services() {
       {/* Musculoskeletal Section */}
       <section className="py-20 lg:py-28 bg-card">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="lg:order-2">
               <span className="text-primary font-medium uppercase tracking-wider text-sm">Orthopedic Care</span>
               <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mt-3 mb-6">
@@ -83,6 +84,15 @@ export default function Services() {
                   of your body work together and affect each other.
                 </p>
                 <p>Treatment may include manual therapy, therapeutic exercises, neuromuscular re-education, and habit education and planning to help you understand your body and manage symptoms independently. My goal is always to empower you with the knowledge and tools you need for lasting results.</p>
+              </div>
+              
+              {/* Musculoskeletal Anatomy Image */}
+              <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-sm">
+                <img 
+                  src={musculoskeletalImg} 
+                  alt="Gentle illustration of spine and back anatomy" 
+                  className="w-full h-auto"
+                />
               </div>
             </div>
             
