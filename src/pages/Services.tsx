@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import pelvicAnatomyImg from "@/assets/pelvic-anatomy.jpg";
 const pelvicFloorConditions = ["Urinary incontinence (stress, urge, mixed)", "Urinary frequency & urgency", "Pelvic pain & pelvic floor dysfunction", "Painful intercourse (dyspareunia)", "Vaginismus", "Constipation & bowel dysfunction", "Prenatal pain & discomfort", "Postpartum recovery & rehabilitation", "Diastasis recti", "Prolapse management", "Constipation/bowel health", "Abdominal pain", "C-section scar mobilization"];
 const musculoskeletalConditions = ["Low back pain", "Neck pain & cervical dysfunction", "Shoulder injuries & rotator cuff issues", "Knee pain & patellofemoral syndrome", "Hip pain & bursitis", "Sciatica & nerve pain", "Sports injuries", "Post-surgical rehabilitation", "Ankle injuries & instability", "Balance training", "Core weakness & instability", "Return to sport training"];
 export default function Services() {
@@ -22,7 +23,7 @@ export default function Services() {
       {/* Pelvic Floor Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <span className="text-primary font-medium uppercase tracking-wider text-sm">Specialty</span>
               <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mt-3 mb-6">
@@ -39,6 +40,15 @@ export default function Services() {
                   but it doesn&apos;t have to be your normal. With specialized treatment, most people see 
                   significant improvement.
                 </p>
+              </div>
+              
+              {/* Pelvic Anatomy Image */}
+              <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-sm">
+                <img 
+                  src={pelvicAnatomyImg} 
+                  alt="Gentle illustration of pelvic floor anatomy" 
+                  className="w-full h-auto"
+                />
               </div>
             </div>
             
